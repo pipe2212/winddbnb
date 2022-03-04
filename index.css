@@ -1,0 +1,422 @@
+/* --------------------- GENERAL CSS ------------------------- */
+
+:root {
+  --black: #333333;
+  --primary: #eb5757;
+  --gray: #bdbdbd;
+  --gray-light: #f2f2f2;
+  --gray-medium: #bdbdbd;
+  --gray-dark: #4f4f4f;
+  --gray-3: #828282;
+  --height-filters: 55px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* --------------------- FILTERS ------------------------- */
+.navbar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 0;
+}
+
+.filters {
+  display: flex;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0 16px;
+  height: var(--height-filters);
+  align-items: center;
+  font-size: 14px;
+  color: var(--black);
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  
+}
+
+.filters div.filter:not(:last-child) {
+  padding: 0 16px;
+  line-height: var(--height-filters);
+  border-right: 1px solid var(--gray-light);
+}
+
+.filters div.filter:first-child {
+  padding-left: 0;
+}
+
+.filters div.filter:last-child {
+  padding-left: 16px;
+}
+
+.filters div.inactive {
+  color: var(--gray);
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search button {
+  background: transparent;
+  border: none;
+}
+
+.search button span {
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width : 200px) and (max-width :767px) {
+ .search2{
+  position: absolute;
+  left: calc(50% - 60px) ;
+  bottom: 30px; 
+ }
+
+}
+
+/* --------------------- LIST ------------------------- */
+
+main {
+  margin-top: 29px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title h1 {
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--black);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem ;
+  grid-template-columns: repeat(auto-fill, minmax(20rem,1fr));
+  
+}
+
+.stay {
+  cursor: pointer;
+}
+
+.stay img {
+  border-radius: 24px;
+  width: 100%;
+  height: 269px;
+  margin-bottom: 15px;
+}
+
+.stay .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.superHost {
+  border: 1px solid var(--gray-dark);
+  border-radius: 12px;
+  padding: 0 10px;
+  height: 28px;
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-right: 11px;
+}
+
+.stayType {
+  color: var(--gray-3);
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
+.color-gray-dark {
+  color: var(--gray-dark);
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.stayName {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--black);
+  margin-top: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 85%;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 101px;
+  margin-bottom: 26px;
+  color: var(--gray-3);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(79, 79, 79, 0.4);
+}
+
+.modal {
+  background-color: white;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 93px 0;
+}
+
+.modal .filters {
+  padding: 0;
+}
+
+.border-r {
+  border-right: 1px solid var(--gray-light);
+}
+
+.h-full {
+  height: 100%;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  font-family: "Mulish";
+  font-size: 14px;
+  color: var(--black);
+  height: 100%;
+  justify-content: center;
+  gap: 4px;
+  padding: 0 27px;
+}
+
+.input.focus {
+  border-radius: 16px;
+  outline: 1px solid var(--black);
+}
+
+.input input {
+  background: transparent;
+  border: none;
+}
+
+.input input::placeholder {
+  color: var(--gray-medium);
+}
+
+.input input:focus {
+  outline: none;
+}
+
+.input label {
+  font-weight: 800;
+  font-size: 9px;
+}
+.search1 {
+  color: white;
+  background-color: var(--primary);
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 27px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.search2 {
+  color: white;
+  background-color: var(--primary);
+  border-radius: 16px;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  padding: 0 27px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.search:hover {
+  filter: brightness(0.9);
+}
+
+.modal .filters div {
+  flex: 1;
+}
+
+.location {
+  list-style: none;
+  font-family: Mulish;
+  font-size: 14px;
+  color: var(--gray-dark);
+  line-height: 18px;
+  padding-left: 1.5rem;
+}
+
+.location li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.guests {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  font-family: Mulish;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.guests .description {
+  font-weight: 400;
+  color: var(--gray-3);
+}
+
+.guests .guest-counter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.button-icon {
+  border-radius: 4px;
+  border: 1px solid var(--gray-3);
+  color: var(--gray-3);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-icon:hover {
+  filter: brightness(0.9);
+}
+
+.options {
+  margin-top: 35px;
+  display: flex;
+  width: 100%;
+}
+
+.options .option {
+  flex: 1;
+}
+
+.overlay {
+  /* visibility: hidden; */
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  z-index: -1;
+}
+
+.modal-open {
+  /* visibility: visible; */
+  opacity: 1;
+  z-index: 1;
+}
+
+.modal {
+  transition-property: transform;
+  transition-duration: 0.25s;
+  transition-delay: 0.25s;
+  transform: translateY(-100%);
+}
+
+.overlay.modal-open .modal {
+  transform: translateY(0%);
+}
+
+.overlay.modal-close {
+  transition-delay: 0.3s;
+}
+
+.overlay.modal-close .modal {
+  transition-delay: 0s;
+}
+
+.option {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap-8 {
+  gap: 8px;
+}
